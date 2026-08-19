@@ -67,31 +67,154 @@
     - py-5: (Padding Y) Añade un relleno arriba y abajo (nivel 5).
     - text-center: Centra todo el texto dentro del elemento.
   -->
-  <main class="container my-auto py-5 text-center">
-    <!-- row justify-content-center: Sistema de rejilla centrado horizontalmente -->
-    <div class="row justify-content-center">
-      <!-- col-md-8: En pantallas medianas y superiores ocupa 8 de 12 columnas (para no hacer el texto demasiado ancho) -->
-      <div class="col-md-8">
-        
-        <!-- display-4: Tipografía de gran tamaño y estilo para títulos destacados -->
-        <!-- mb-3: Margen inferior nivel 3 -->
-        <h1 class="display-4 fw-bold mb-3">Diseño simple y funcional</h1>
-        
-        <!-- lead: Aumenta ligeramente el tamaño del texto para dar aspecto de subtítulo -->
-        <!-- text-muted: Aplica un color de fuente gris atenuado -->
-        <!-- mb-4: Margen inferior nivel 4 -->
-        <p class="lead text-muted mb-4">
-          Una base sólida y limpia lista para escalar según las necesidades del proyecto.
-        </p>
-        
-        <!-- btn btn-dark: Botón estilizado con fondo oscuro -->
-        <!-- btn-lg: Botón de tamaño grande -->
-        <!-- px-4: Padding horizontal interno nivel 4 -->
-        <button class="btn btn-dark btn-lg px-4">Saber más</button>
-        
+<!-- CONTENEDOR PRINCIPAL DEL CONTENIDO -->
+<main class="container my-5" style="max-width: 900px;">
+
+  <!-- 1. TÍTULO DE LA MATERIA Y FICHA RÁPIDA -->
+  <section class="pb-4 mb-5 border-bottom text-center text-md-start">
+    <span class="text-uppercase tracking-wide text-muted small fw-bold">Asignatura</span>
+    <h1 class="display-4 fw-bold mb-3">Programación Web Fundamental</h1>
+    <p class="lead text-muted mb-4">Clave del curso: INF-1024</p>
+    
+    <!-- Ficha técnica en bloque simple (Créditos, Horario, Salón) -->
+    <div class="row g-3 py-3 bg-white rounded border text-center">
+      <div class="col-md-4">
+        <span class="text-muted d-block small text-uppercase fw-bold">Créditos</span>
+        <span class="fs-5 fw-semibold">5 SATCA (3-2-5)</span>
+      </div>
+      <div class="col-md-4 border-start-md">
+        <span class="text-muted d-block small text-uppercase fw-bold">Horario</span>
+        <span class="fs-5 fw-semibold">Lun y Miér 10:00 - 12:00</span>
+      </div>
+      <div class="col-md-4 border-start-md">
+        <span class="text-muted d-block small text-uppercase fw-bold">Salón / Lab</span>
+        <span class="fs-5 fw-semibold">Laboratorio L2</span>
       </div>
     </div>
-  </main>
+  </section>
+
+  <!-- 2. INTENCIÓN DIDÁCTICA -->
+  <section class="mb-5">
+    <h2 class="h4 fw-bold mb-3">Intención Didáctica</h2>
+    <p class="text-muted leading-relaxed">
+      Esta asignatura aporta al perfil del egresado la capacidad de desarrollar e implementar aplicaciones web modernas, seguras y adaptables a distintos dispositivos. Se enfoca en el razonamiento lógico para la maquetación de interfaces, el uso de estándares actuales de la W3C y la integración de frameworks de maquetado ágil.
+    </p>
+  </section>
+
+  <!-- 3. COMPETENCIAS (PREVIAS Y A ADQUIRIR) -->
+  <section class="mb-5 py-4 border-top border-bottom">
+    <div class="row g-4">
+      <!-- Competencias Previas -->
+      <div class="col-md-6">
+        <h2 class="h5 fw-bold mb-3">Competencias Previas</h2>
+        <ul class="text-muted small ps-3 mb-0">
+          <li class="mb-2">Lógica de programación y estructuras de datos básicas.</li>
+          <li class="mb-2">Manejo fundamental de sistemas operativos y redes.</li>
+          <li>Comprensión de lectura técnica en idioma inglés.</li>
+        </ul>
+      </div>
+
+      <!-- Competencias a Adquirir -->
+      <div class="col-md-6">
+        <h2 class="h5 fw-bold mb-3">Competencias a Adquirir</h2>
+        <ul class="text-muted small ps-3 mb-0">
+          <li class="mb-2">Diseñar e implementar maquetación web responsiva de alta calidad.</li>
+          <li class="mb-2">Integrar frameworks de estilos como Bootstrap 5 para desarrollo ágil.</li>
+          <li>Consumir e integrar datos y APIs en el frontend.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TEMARIO Y PRÁCTICAS INTEGRADAS -->
+  <section class="mb-5">
+    <h2 class="h4 fw-bold mb-4">Temario y Prácticas</h2>
+    <div class="list-group list-group-flush">
+      
+      <!-- Unidad 1 -->
+      <div class="list-group-item bg-transparent px-0 py-3">
+        <div class="d-flex w-100 justify-content-between align-items-baseline">
+          <h3 class="h6 fw-bold mb-1">Unidad 1: Arquitectura Web y HTML5 Semántico</h3>
+          <span class="badge bg-secondary">Semanas 1 - 4</span>
+        </div>
+        <p class="text-muted small mb-2">Protocolos HTTP/HTTPS, estructura de un documento, etiquetas semánticas y formularios.</p>
+        <!-- Prácticas de la Unidad -->
+        <div class="bg-white p-2 rounded border-start border-3 border-dark small text-muted">
+          <strong>Prácticas:</strong> 1.1 Configuración de entorno local. 1.2 Formulario de registro accesible.
+        </div>
+      </div>
+
+      <!-- Unidad 2 -->
+      <div class="list-group-item bg-transparent px-0 py-3">
+        <div class="d-flex w-100 justify-content-between align-items-baseline">
+          <h3 class="h6 fw-bold mb-1">Unidad 2: Estilos Adaptables con CSS3 y Bootstrap 5</h3>
+          <span class="badge bg-secondary">Semanas 5 - 10</span>
+        </div>
+        <p class="text-muted small mb-2">Modelo de cajas, Flexbox, Grid y componentes responsivos de Bootstrap.</p>
+        <div class="bg-white p-2 rounded border-start border-3 border-dark small text-muted">
+          <strong>Prácticas:</strong> 2.1 Maquetación de sitio estático minimalista. 2.2 Replicación de landing page comercial.
+        </div>
+      </div>
+
+      <!-- Unidad 3 -->
+      <div class="list-group-item bg-transparent px-0 py-3">
+        <div class="d-flex w-100 justify-content-between align-items-baseline">
+          <h3 class="h6 fw-bold mb-1">Unidad 3: Lógica e Interactividad Frontend</h3>
+          <span class="badge bg-secondary">Semanas 11 - 16</span>
+        </div>
+        <p class="text-muted small mb-2">Sintaxis JavaScript, manipulación del DOM y eventos de usuario.</p>
+        <div class="bg-white p-2 rounded border-start border-3 border-dark small text-muted">
+          <strong>Prácticas:</strong> 3.1 Validación de formularios del lado del cliente. 3.2 Proyecto integrador final.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. SOFTWARE, MATERIALES Y RECURSOS -->
+  <section class="mb-5 py-4 border-top border-bottom">
+    <h2 class="h4 fw-bold mb-4">Requerimientos del Curso</h2>
+    <div class="row g-4">
+      
+      <div class="col-md-4">
+        <h3 class="h6 fw-bold mb-2">Software a Utilizar</h3>
+        <ul class="list-unstyled text-muted small mb-0">
+          <li class="mb-1">• Visual Studio Code / Cursor</li>
+          <li class="mb-1">• Google Chrome / Firefox</li>
+          <li>• Git y GitHub</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="h6 fw-bold mb-2">Materiales</h3>
+        <ul class="list-unstyled text-muted small mb-0">
+          <li class="mb-1">• Computadora personal (mín. 8GB RAM)</li>
+          <li>• Conexión estable a internet</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="h6 fw-bold mb-2">Recursos Didácticos</h3>
+        <ul class="list-unstyled text-muted small mb-0">
+          <li class="mb-1">• Documentación oficial MDN</li>
+          <li>• Repositorio de ejemplos del curso</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. BIBLIOGRAFÍA -->
+  <section class="mb-5">
+    <h2 class="h4 fw-bold mb-3">Bibliografía</h2>
+    <ol class="text-muted small ps-3 mb-0">
+      <li class="mb-2">Robbins, J. N. (2018). <em>Learning Web Design: A Beginner's Guide to HTML, CSS, JavaScript, and Web Graphics</em>. O'Reilly Media.</li>
+      <li class="mb-2">Duckett, J. (2014). <em>Web Design with HTML, CSS, JavaScript and jQuery Set</em>. Wiley.</li>
+      <li>Documentación Oficial de Bootstrap 5. <code>getbootstrap.com</code></li>
+    </ol>
+  </section>
+
+</main>
 
   <!-- ==========================================
        PIE DE PÁGINA (FOOTER)
