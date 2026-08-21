@@ -31,30 +31,24 @@
     - navbar-light bg-white: Fondo blanco con colores de texto legibles para fondos claros.
     - border-bottom: Añade una línea divisoria inferior muy tenue.
   -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-    <!-- container: Centra el contenido y le da márgenes laterales automáticos -->
-    <div class="container">
+  <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom fixed-top">
+    <div class="container" style="max-width: 900px;">
+      <a class="navbar-brand fw-bold fs-6" href="#general">ProgWeb 101</a>
       
-      <!-- Logo o título principal de la marca -->
-      <!-- fw-bold: Aplica grosor de fuente en negrita (Font Weight Bold) -->
-      <a class="navbar-brand fw-bold" href="#">Instituto Tecnológico Superior de Lerdo</a>
-
-      <!-- Botón tipo "hamburguesa" que aparece únicamente en pantallas pequeñas -->
-      <!-- data-bs-toggle y data-bs-target vinculan este botón con el div colapsable mediante JavaScript -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuSecciones">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Menú desplegable que contiene los enlaces de navegación -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- ms-auto: (Margin Start Auto) Empuja la lista de enlaces totalmente hacia la derecha -->
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+      <!-- Menú con hipervínculos tipo 'nav-underline' (línea sobria abajo del enlace) -->
+      <div class="collapse navbar-collapse" id="menuSecciones">
+        <ul class="navbar-nav ms-auto nav-underline small fw-semibold">
+          <li class="nav-item"><a class="nav-link" href="#general">General</a></li>
+          <li class="nav-item"><a class="nav-link" href="#competencias">Competencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#temario">Temario</a></li>
+          <li class="nav-item"><a class="nav-link" href="#requerimientos">Requerimientos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bibliografia">Bibliografía</a></li>
         </ul>
       </div>
-
     </div>
   </nav>
 
@@ -71,7 +65,7 @@
 <main class="container my-5" style="max-width: 900px;">
 
   <!-- 1. TÍTULO DE LA MATERIA Y FICHA RÁPIDA -->
-  <section class="pb-4 mb-5 border-bottom text-center text-md-start">
+  <section id="general" class="pb-4 mb-5 border-bottom text-center text-md-start">
     <span class="text-uppercase tracking-wide text-muted small fw-bold">Asignatura</span>
     <h1 class="display-4 fw-bold mb-3">Control Eléctrico</h1>
     <p class="lead text-muted mb-4">Clave de la materia: AUC-2205</p>
@@ -93,17 +87,11 @@
   <section class="mb-5">
     <h2 class="h4 fw-bold mb-3">Intención Didáctica</h2>
     <p class="text-muted leading-relaxed">
-      El estudiante se familiarizará con el manejo de máquinas CNC para el diseño y fabricación de elementos de máquinas. Será capaz de operar y programar las diferentes tecnologías que componen un sistema de manufactura integrada.<br><br>
-			En el tema uno se abordan los tópicos referentes a historia, clasificación y partes de las máquinas CNC, así como el cálculo de parámetros de corte, puesta a punto de máquinas de control numérico y la normativa de seguridad.<br><br>
-			En el tema dos se revisa el procedimiento para elaborar una pieza mediante máquinas CNC, considerando cálculo de parámetros, estructura del programa, códigos G y M. Se realiza el maquinado de piezas mediante la programación con CAD- CAM (Diseño Asistido por Computadora – Manufactura Asistido por Computadora), analizando los distintos tipos de maquinados a través de planos mecánicos.<br><br>
-			Para el tema tres se analizan las características de los sistemas de inspección, así como sus limitantes y requerimientos para su implementación. Se revisa el procedimiento para generar patrones para la inspección de piezas. Se trata además los tópicos referentes a sistemas de almacenamiento automáticos, criterios de codificación y programación de material.<br><br>
-			En el tema cuatro se establecen los diversos elementos de los manipuladores robóticos además de realizar la programación aplicando los diversos comandos de operación para un robot alimentador de partes en una maquina.<br><br>
-			En el tema cinco se realiza la comunicación entre las distintas estaciones de la celda de manufactura para así programar la producción, además de interpretar y monitorear señales del proceso y puesta en marcha de las estaciones. 
-    </p>
+			</p>
   </section>
 
   <!-- 3. COMPETENCIAS (PREVIAS Y A ADQUIRIR) -->
-  <section class="mb-5 py-4 border-top border-bottom">
+  <section id="competencias" class="mb-5 py-4 border-top border-bottom">
     <div class="row g-4">
       <!-- Competencias Previas -->
       <div class="col-md-6">
@@ -128,14 +116,14 @@
   </section>
 
   <!-- 4. TEMARIO Y PRÁCTICAS INTEGRADAS -->
-  <section class="mb-5">
+  <section id="temario" class="mb-5">
     <h2 class="h4 fw-bold mb-4">Temario</h2>
     <div class="list-group list-group-flush">
       
       <!-- Unidad 1 -->
       <div class="list-group-item bg-transparent px-0 py-3">
         <div class="d-flex w-100 justify-content-between align-items-baseline">
-          <h3 class="h6 fw-bold mb-1">Unidad 1:</h3>
+          <h3 class="h6 fw-bold mb-1">Unidad 1: Fundamentos de controles eléctricos</h3>
           <span class="badge bg-secondary">Semanas 1 - 4</span>
         </div>
         <p class="text-muted small mb-2">...</p>
@@ -149,7 +137,7 @@
   </section>
 
   <!-- 5. SOFTWARE, MATERIALES Y RECURSOS -->
-  <section class="mb-5 py-4 border-top border-bottom">
+  <section  id="requerimientos" class="mb-5 py-4 border-top border-bottom">
     <h2 class="h4 fw-bold mb-4">Requerimientos del Curso</h2>
     <div class="row g-4">
       
@@ -184,7 +172,7 @@
   </section>
 
   <!-- 6. BIBLIOGRAFÍA -->
-  <section class="mb-5">
+  <section id="bibliografia" class="mb-5">
     <h2 class="h4 fw-bold mb-3">Bibliografía</h2>
     <ol class="text-muted small ps-3 mb-0">
       <li class="mb-2">Autor. <em>Título del libro</em>. Editorial.</li>
