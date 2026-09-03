@@ -11,18 +11,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <style>
-  /* Desplazamiento suave y compensación para la barra de navegación fija */
+  /* Desplazamiento suave y compensación por menú fijo */
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
   }
 
-  /* Resaltado sutil para el menú lateral de pestañas */
+  /* TEMA SELECCIONADO: Azul más claro con indicador lateral */
   .list-group-item-action.active {
-    background-color: var(--bs-primary-bg-subtle);
-    color: var(--bs-primary);
-    border-color: var(--bs-primary-border-subtle);
+    background-color: #e7f1ff !important; /* Fondo azul muy claro */
+    color: #0d6efd !important;             /* Texto principal en azul */
+    border-left: 4px solid #0d6efd !important; /* Barra lateral distintiva */
     font-weight: 600;
+  }
+
+  /* Ajustes de color interno para el tema activo */
+  .list-group-item-action.active small {
+    color: #0d6efd !important;
+  }
+
+  .list-group-item-action.active .badge {
+    background-color: #0d6efd !important;
+    color: #ffffff !important;
   }
 </style>
 </head>
@@ -63,64 +73,75 @@
 
     <div class="row g-4">
 
-			<!-- COLUMNA IZQUIERDA: MENÚ DE TEMAS (DIVIDIDO POR UNIDADES) -->
-			<div class="col-md-4 col-lg-3">
-				<div class="sticky-top" style="top: 90px;">
-					
-					<div class="list-group shadow-sm rounded border-0 overflow-hidden" id="list-tab" role="tablist">
-						
-						<!-- ENCABEZADO UNIDAD 1 -->
-						<div class="list-group-item bg-primary-subtle text-primary text-uppercase fw-bold small py-2 px-3 border-0 border-bottom" style="font-size: 0.72rem; letter-spacing: 0.5px;">
-							<i class="bi bi-bookmark-fill me-1"></i> Unidad 1: Fundamentos
-						</div>
-			
-						<!-- TEMAS UNIDAD 1 -->
-						<a class="list-group-item list-group-item-action py-2 px-3 border-0 border-bottom active" id="list-tema1-list" data-bs-toggle="list" href="#tema1" role="tab">
-							<div class="d-flex w-100 justify-content-between align-items-center mb-1">
-								<small class="fw-bold text-secondary" style="font-size: 0.7rem;">Tema 1.1</small>
-								<span class="badge bg-secondary-subtle text-secondary" style="font-size: 0.65rem;">4 Semanas</span>
-							</div>
-							<span class="d-block small">Introducción a los Controles Eléctricos</span>
-						</a>
-			
-						<a class="list-group-item list-group-item-action py-2 px-3 border-0 border-bottom" id="list-tema2-list" data-bs-toggle="list" href="#tema2" role="tab">
-							<div class="d-flex w-100 justify-content-between align-items-center mb-1">
-								<small class="fw-bold text-secondary" style="font-size: 0.7rem;">Tema 1.2</small>
-								<span class="badge bg-secondary-subtle text-secondary" style="font-size: 0.65rem;">2 Semanas</span>
-							</div>
-							<span class="d-block small">Relevadores y Contactores</span>
-						</a>
-			
-						<!-- ENCABEZADO UNIDAD 2 -->
-						<div class="list-group-item bg-primary-subtle text-primary text-uppercase fw-bold small py-2 px-3 border-0 border-bottom border-top" style="font-size: 0.72rem; letter-spacing: 0.5px;">
-							<i class="bi bi-bookmark-fill me-1"></i> Unidad 2: Motores Eléctricos
-						</div>
-			
-						<!-- TEMAS UNIDAD 2 -->
-						<a class="list-group-item list-group-item-action py-2 px-3 border-0" id="list-tema3-list" data-bs-toggle="list" href="#tema3" role="tab">
-							<div class="d-flex w-100 justify-content-between align-items-center mb-1">
-								<small class="fw-bold text-secondary" style="font-size: 0.7rem;">Tema 2.1</small>
-								<span class="badge bg-secondary-subtle text-secondary" style="font-size: 0.65rem;">5 Semanas</span>
-							</div>
-							<span class="d-block small">Motores Trifásicos y Arrancadores</span>
-						</a>
-			
-					</div>
-				</div>
-			</div>
+<!-- COLUMNA IZQUIERDA: MENÚ DE TEMAS -->
+<div class="col-md-4 col-lg-3">
+  <div class="sticky-top" style="top: 90px;">
+    
+    <div class="list-group shadow-sm rounded border-0 overflow-hidden" id="list-tab" role="tablist">
+      
+      <!-- ENCABEZADO UNIDAD 1 (COLOR FUERTE / AZUL SÓLIDO) -->
+      <div class="list-group-item bg-primary text-white text-uppercase fw-bold small py-2 px-3 border-0" style="font-size: 0.72rem; letter-spacing: 0.5px;">
+        <i class="bi bi-bookmark-fill me-1"></i> Unidad 1: Fundamentos
+      </div>
+
+      <!-- TEMAS UNIDAD 1 -->
+      <a class="list-group-item list-group-item-action py-2 px-3 border-0 border-bottom" id="list-tema1-list" data-bs-toggle="list" href="#tema1" role="tab">
+        <div class="d-flex w-100 justify-content-between align-items-center mb-1">
+          <small class="fw-bold text-secondary" style="font-size: 0.7rem;">Tema 1.1</small>
+          <span class="badge bg-secondary-subtle text-secondary" style="font-size: 0.65rem;">4 Semanas</span>
+        </div>
+        <span class="d-block small">Introducción a los Controles Eléctricos</span>
+      </a>
+
+      <a class="list-group-item list-group-item-action py-2 px-3 border-0 border-bottom" id="list-tema2-list" data-bs-toggle="list" href="#tema2" role="tab">
+        <div class="d-flex w-100 justify-content-between align-items-center mb-1">
+          <small class="fw-bold text-secondary" style="font-size: 0.7rem;">Tema 1.2</small>
+          <span class="badge bg-secondary-subtle text-secondary" style="font-size: 0.65rem;">2 Semanas</span>
+        </div>
+        <span class="d-block small">Relevadores y Contactores</span>
+      </a>
+
+      <!-- ENCABEZADO UNIDAD 2 (COLOR FUERTE / AZUL SÓLIDO) -->
+      <div class="list-group-item bg-primary text-white text-uppercase fw-bold small py-2 px-3 border-0" style="font-size: 0.72rem; letter-spacing: 0.5px;">
+        <i class="bi bi-bookmark-fill me-1"></i> Unidad 2: Motores Eléctricos
+      </div>
+
+      <!-- TEMAS UNIDAD 2 -->
+      <a class="list-group-item list-group-item-action py-2 px-3 border-0" id="list-tema3-list" data-bs-toggle="list" href="#tema3" role="tab">
+        <div class="d-flex w-100 justify-content-between align-items-center mb-1">
+          <small class="fw-bold text-secondary" style="font-size: 0.7rem;">Tema 2.1</small>
+          <span class="badge bg-secondary-subtle text-secondary" style="font-size: 0.65rem;">5 Semanas</span>
+        </div>
+        <span class="d-block small">Motores Trifásicos y Arrancadores</span>
+      </a>
+
+    </div>
+  </div>
+</div>
 
       <!-- COLUMNA DERECHA: PANEL DE CONTENIDO DEL TEMA SELECCIONADO -->
-      <div class="col-md-8 col-lg-9">
-        <div class="tab-content" id="nav-tabContent">
+<!-- COLUMNA DERECHA: PANEL DE CONTENIDO -->
+<div class="col-md-8 col-lg-9">
 
-          <!-- ==========================================
-               TEMA 1: CONTENIDO
-               ========================================== -->
-          <div class="tab-pane fade show active" id="tema1" role="tabpanel">
-            <div class="bg-white p-4 rounded border shadow-sm mb-4">
-              <span class="badge bg-primary mb-2">Unidad 1</span>
-              <h2 class="h4 fw-bold text-dark mb-2">1.1 Introducción a los Controles Eléctricos</h2>
-              <p class="text-muted small">Conceptos fundamentales de automatización electromecánica, simbología NEMA/IEC y esquemas de protección.</p>
+  <!-- MENSAJE INICIAL (Se muestra por defecto al cargar la página) -->
+  <div id="mensaje-inicial" class="bg-white p-5 rounded border shadow-sm text-center text-muted my-auto">
+    <i class="bi bi-hand-index-thumb fs-1 text-primary mb-3 d-block"></i>
+    <h3 class="h5 fw-bold text-dark mb-2">Selecciona un tema</h3>
+    <p class="small mb-0 mx-auto" style="max-width: 400px;">
+      Haz clic en cualquiera de las unidades del menú lateral para desplegar sus presentaciones, enlaces y recursos descargables.
+    </p>
+  </div>
+
+  <!-- CONTENEDOR DE PESTAÑAS -->
+  <div class="tab-content" id="nav-tabContent">
+
+    <!-- TEMA 1 (Nota que ya no tiene la clase "show active") -->
+    <div class="tab-pane fade" id="tema1" role="tabpanel">
+      <!-- ... Contenido del Tema 1 ... -->
+           <div class="bg-white p-4 rounded border shadow-sm mb-4">
+              <!-- <span class="badge bg-primary mb-2">Unidad 1</span> -->
+              <h2 class="h4 fw-bold text-dark mb-2">1.1 Introducción </h2>
+              <!-- <p class="text-muted small">Conceptos fundamentales de automatización electromecánica, simbología NEMA/IEC y esquemas de protección.</p> -->
               
               <hr class="my-4">
 
@@ -131,12 +152,12 @@
                 </h3>
                 
                 <!-- Contenedor responsivo 16:9 para diapositivas (Google Slides, Canva o PDF) -->
-                <div class="ratio ratio-16x9 rounded border shadow-sm mb-2">
-                  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR_EXAMPLE/embed?start=false&loop=false" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                </div>
+                <!-- <div class="ratio ratio-16x9 rounded border shadow-sm mb-2"> -->
+                  <!-- <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR_EXAMPLE/embed?start=false&loop=false" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> -->
+                <!-- </div> -->
                 <div class="d-flex justify-content-between align-items-center">
-                  <span class="text-muted" style="font-size: 0.75rem;">Visor interactivo de Google Slides / Canva</span>
-                  <a href="#" target="_blank" class="btn btn-sm btn-outline-primary"><i class="bi bi-box-arrow-up-right me-1"></i>Abrir en pantalla completa</a>
+                  <!-- <span class="text-muted" style="font-size: 0.75rem;">Visor interactivo de Google Slides / Canva</span> -->
+                  <!-- <a href="#" target="_blank" class="btn btn-sm btn-outline-primary"><i class="bi bi-box-arrow-up-right me-1"></i>Abrir en pantalla completa</a> -->
                 </div>
               </div>
 
@@ -147,21 +168,21 @@
                 </h3>
                 
                 <div class="list-group list-group-flush border rounded">
-                  <a href="https://www.electrical-installation.org" target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-3">
-                    <div>
-                      <h4 class="h6 fw-semibold mb-1 text-dark">Guía de Instalación Eléctrica — Schneider Electric</h4>
-                      <p class="text-muted small mb-0">Normativa internacional sobre protecciones y control industrial.</p>
-                    </div>
-                    <i class="bi bi-arrow-right-short fs-4 text-primary"></i>
-                  </a>
+                  <!-- <a href="https://www.electrical-installation.org" target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-3"> -->
+                    <!-- <div> -->
+                      <!-- <h4 class="h6 fw-semibold mb-1 text-dark">Guía de Instalación Eléctrica — Schneider Electric</h4> -->
+                      <!-- <p class="text-muted small mb-0">Normativa internacional sobre protecciones y control industrial.</p> -->
+                    <!-- </div> -->
+                    <!-- <i class="bi bi-arrow-right-short fs-4 text-primary"></i> -->
+                  <!-- </a> -->
                   
-                  <a href="https://www.eaton.com" target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-3">
-                    <div>
-                      <h4 class="h6 fw-semibold mb-1 text-dark">Simulador de Simbología NEMA vs IEC</h4>
-                      <p class="text-muted small mb-0">Herramienta interactiva para comparar esquemáticos.</p>
-                    </div>
-                    <i class="bi bi-arrow-right-short fs-4 text-primary"></i>
-                  </a>
+                  <!-- <a href="https://www.eaton.com" target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-3"> -->
+                    <!-- <div> -->
+                      <!-- <h4 class="h6 fw-semibold mb-1 text-dark">Simulador de Simbología NEMA vs IEC</h4> -->
+                      <!-- <p class="text-muted small mb-0">Herramienta interactiva para comparar esquemáticos.</p> -->
+                    <!-- </div> -->
+                    <!-- <i class="bi bi-arrow-right-short fs-4 text-primary"></i> -->
+                  <!-- </a> -->
                 </div>
               </div>
 
@@ -172,72 +193,51 @@
                 </h3>
                 
                 <div class="row g-2">
-                  <div class="col-sm-6">
-                    <div class="p-3 bg-light rounded border d-flex align-items-center justify-content-between">
-                      <div class="d-flex align-items-center">
-                        <i class="bi bi-file-earmark-pdf text-danger fs-3 me-3"></i>
-                        <div>
-                          <span class="fw-semibold d-block small text-dark">Simbologia_Standard.pdf</span>
-                          <span class="text-muted" style="font-size: 0.75rem;">PDF • 1.2 MB</span>
-                        </div>
-                      </div>
-                      <a href="#" class="btn btn-sm btn-light border"><i class="bi bi-download"></i></a>
-                    </div>
-                  </div>
+                  <!-- <div class="col-sm-6"> -->
+                    <!-- <div class="p-3 bg-light rounded border d-flex align-items-center justify-content-between"> -->
+                      <!-- <div class="d-flex align-items-center"> -->
+                        <!-- <i class="bi bi-file-earmark-pdf text-danger fs-3 me-3"></i> -->
+                        <!-- <div> -->
+                          <!-- <span class="fw-semibold d-block small text-dark">Simbologia_Standard.pdf</span> -->
+                          <!-- <span class="text-muted" style="font-size: 0.75rem;">PDF • 1.2 MB</span> -->
+                        <!-- </div> -->
+                      <!-- </div> -->
+                      <!-- <a href="#" class="btn btn-sm btn-light border"><i class="bi bi-download"></i></a> -->
+                    <!-- </div> -->
+                  <!-- </div> -->
 
-                  <div class="col-sm-6">
-                    <div class="p-3 bg-light rounded border d-flex align-items-center justify-content-between">
-                      <div class="d-flex align-items-center">
-                        <i class="bi bi-file-earmark-zip text-warning fs-3 me-3"></i>
-                        <div>
-                          <span class="fw-semibold d-block small text-dark">Practica1_CADeSIMU.zip</span>
-                          <span class="text-muted" style="font-size: 0.75rem;">ZIP • 850 KB</span>
-                        </div>
-                      </div>
-                      <a href="#" class="btn btn-sm btn-light border"><i class="bi bi-download"></i></a>
-                    </div>
-                  </div>
+                  <!-- <div class="col-sm-6"> -->
+                    <!-- <div class="p-3 bg-light rounded border d-flex align-items-center justify-content-between"> -->
+                      <!-- <div class="d-flex align-items-center"> -->
+                        <!-- <i class="bi bi-file-earmark-zip text-warning fs-3 me-3"></i> -->
+                        <!-- <div> -->
+                          <!-- <span class="fw-semibold d-block small text-dark">Practica1_CADeSIMU.zip</span> -->
+                          <!-- <span class="text-muted" style="font-size: 0.75rem;">ZIP • 850 KB</span> -->
+                        <!-- </div> -->
+                      <!-- </div> -->
+                      <!-- <a href="#" class="btn btn-sm btn-light border"><i class="bi bi-download"></i></a> -->
+                    <!-- </div> -->
+                  <!-- </div> -->
                 </div>
 
               </div>
 
             </div>
-          </div>
 
-          <!-- ==========================================
-               TEMA 2: CONTENIDO
-               ========================================== -->
-          <div class="tab-pane fade" id="tema2" role="tabpanel">
-            <div class="bg-white p-4 rounded border shadow-sm">
-              <span class="badge bg-primary mb-2">Unidad 1</span>
-              <h2 class="h4 fw-bold text-dark mb-2">1.2 Relevadores y Contactores</h2>
-              <p class="text-muted small">Estructura interna, principio de funcionamiento magnético y selección de bobinas para corriente alterna y continua.</p>
-              
-              <hr class="my-4">
+    </div>
 
-              <!-- Presentación del Tema 2 -->
-              <div class="mb-4">
-                <h3 class="h6 fw-bold text-primary mb-3"><i class="bi bi-file-slides me-2"></i>Presentación del Tema</h3>
-                <div class="ratio ratio-16x9 rounded border shadow-sm mb-2">
-                  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR_EXAMPLE2/embed?start=false" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- TEMA 2 -->
+    <div class="tab-pane fade" id="tema2" role="tabpanel">
+      <!-- ... Contenido del Tema 2 ... -->
+    </div>
 
-          <!-- ==========================================
-               TEMA 3: CONTENIDO
-               ========================================== -->
-          <div class="tab-pane fade" id="tema3" role="tabpanel">
-            <div class="bg-white p-4 rounded border shadow-sm">
-              <span class="badge bg-primary mb-2">Unidad 2</span>
-              <h2 class="h4 fw-bold text-dark mb-2">2.1 Motores Trifásicos y Arrancadores</h2>
-              <p class="text-muted small">Análisis de motores de inducción jaula de ardilla y esquemas de arranque a tensión reducida (Estrella-Delta).</p>
-            </div>
-          </div>
+    <!-- TEMA 3 -->
+    <div class="tab-pane fade" id="tema3" role="tabpanel">
+      <!-- ... Contenido del Tema 3 ... -->
+    </div>
 
-        </div>
-      </div>
+  </div>
+</div>
 
     </div>
   </main>
@@ -250,5 +250,20 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Escucha cuando el usuario selecciona cualquier pestaña
+    const tabLinks = document.querySelectorAll('#list-tab a[data-bs-toggle="list"]');
+    
+    tabLinks.forEach(link => {
+      link.addEventListener('shown.bs.tab', () => {
+        const mensajeInicial = document.getElementById('mensaje-inicial');
+        if (mensajeInicial) {
+          mensajeInicial.classList.add('d-none'); // Oculta la tarjeta de bienvenida
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
