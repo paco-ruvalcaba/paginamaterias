@@ -43,7 +43,7 @@
       <ul class="navbar-nav ms-auto small fw-semibold">
         <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house me-1"></i>Inicio</a></li>
         <li class="nav-item"><a class="nav-link" href="encuadre.html"><i class="bi bi-file-text me-1"></i>Encuadre</a></li>
-        <li class="nav-item"><a class="nav-link" href="temario.html"><i class="bi bi-journal-bookmark me-1"></i>Temario & Recursos</a></li>
+        <li class="nav-item"><a class="nav-link active text-primary" aria-current="page" href="temario.html"><i class="bi bi-journal-bookmark me-1"></i>Temario & Recursos</a></li>
       </ul>
     </div>
   </div>
@@ -56,45 +56,58 @@
 
     <!-- ENCABEZADO DE PÁGINA -->
     <div class="mb-4 pb-2 border-bottom">
-      <span class="badge bg-primary-subtle text-primary border border-primary-subtle mb-1">Repositorio Digital</span>
+      <!-- <span class="badge bg-primary-subtle text-primary border border-primary-subtle mb-1">Repositorio Digital</span> -->
       <h1 class="h3 fw-bold text-dark">Temario y Recursos Didácticos</h1>
-      <p class="text-muted small mb-0">Selecciona un tema en el menú para desplegar sus presentaciones, lecturas y enlaces de interés.</p>
+      <!-- <p class="text-muted small mb-0">Selecciona un tema en el menú para desplegar sus presentaciones, lecturas y enlaces de interés.</p> -->
     </div>
 
     <div class="row g-4">
 
-      <!-- COLUMNA IZQUIERDA: MENÚ DE TEMAS (TABS) -->
-      <div class="col-md-4 col-lg-3">
-        <div class="sticky-top" style="top: 90px;">
-          <h2 class="h6 fw-bold text-uppercase text-muted mb-3" style="font-size: 0.75rem; letter-spacing: 0.5px;">Unidades del Curso</h2>
-          
-          <div class="list-group shadow-sm rounded border-0" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active py-3 border" id="list-tema1-list" data-bs-toggle="list" href="#tema1" role="tab">
-              <div class="d-flex w-100 justify-content-between align-items-center mb-1">
-                <small class="text-uppercase fw-bold text-primary" style="font-size: 0.7rem;">Unidad 1</small>
-                <span class="badge bg-secondary-subtle text-secondary" style="font-size: 0.65rem;">4 Semanas</span>
-              </div>
-              <span class="d-block small">1.1 Introducción a los Controles Eléctricos</span>
-            </a>
-
-            <a class="list-group-item list-group-item-action py-3 border" id="list-tema2-list" data-bs-toggle="list" href="#tema2" role="tab">
-              <div class="d-flex w-100 justify-content-between align-items-center mb-1">
-                <small class="text-uppercase fw-bold text-primary" style="font-size: 0.7rem;">Unidad 1</small>
-                <span class="badge bg-secondary-subtle text-secondary" style="font-size: 0.65rem;">2 Semanas</span>
-              </div>
-              <span class="d-block small">1.2 Relevadores y Contactores</span>
-            </a>
-
-            <a class="list-group-item list-group-item-action py-3 border" id="list-tema3-list" data-bs-toggle="list" href="#tema3" role="tab">
-              <div class="d-flex w-100 justify-content-between align-items-center mb-1">
-                <small class="text-uppercase fw-bold text-primary" style="font-size: 0.7rem;">Unidad 2</small>
-                <span class="badge bg-secondary-subtle text-secondary" style="font-size: 0.65rem;">5 Semanas</span>
-              </div>
-              <span class="d-block small">2.1 Motores Trifásicos y Arrancadores</span>
-            </a>
-          </div>
-        </div>
-      </div>
+			<!-- COLUMNA IZQUIERDA: MENÚ DE TEMAS (DIVIDIDO POR UNIDADES) -->
+			<div class="col-md-4 col-lg-3">
+				<div class="sticky-top" style="top: 90px;">
+					
+					<div class="list-group shadow-sm rounded border-0 overflow-hidden" id="list-tab" role="tablist">
+						
+						<!-- ENCABEZADO UNIDAD 1 -->
+						<div class="list-group-item bg-primary-subtle text-primary text-uppercase fw-bold small py-2 px-3 border-0 border-bottom" style="font-size: 0.72rem; letter-spacing: 0.5px;">
+							<i class="bi bi-bookmark-fill me-1"></i> Unidad 1: Fundamentos
+						</div>
+			
+						<!-- TEMAS UNIDAD 1 -->
+						<a class="list-group-item list-group-item-action py-2 px-3 border-0 border-bottom active" id="list-tema1-list" data-bs-toggle="list" href="#tema1" role="tab">
+							<div class="d-flex w-100 justify-content-between align-items-center mb-1">
+								<small class="fw-bold text-secondary" style="font-size: 0.7rem;">Tema 1.1</small>
+								<span class="badge bg-secondary-subtle text-secondary" style="font-size: 0.65rem;">4 Semanas</span>
+							</div>
+							<span class="d-block small">Introducción a los Controles Eléctricos</span>
+						</a>
+			
+						<a class="list-group-item list-group-item-action py-2 px-3 border-0 border-bottom" id="list-tema2-list" data-bs-toggle="list" href="#tema2" role="tab">
+							<div class="d-flex w-100 justify-content-between align-items-center mb-1">
+								<small class="fw-bold text-secondary" style="font-size: 0.7rem;">Tema 1.2</small>
+								<span class="badge bg-secondary-subtle text-secondary" style="font-size: 0.65rem;">2 Semanas</span>
+							</div>
+							<span class="d-block small">Relevadores y Contactores</span>
+						</a>
+			
+						<!-- ENCABEZADO UNIDAD 2 -->
+						<div class="list-group-item bg-primary-subtle text-primary text-uppercase fw-bold small py-2 px-3 border-0 border-bottom border-top" style="font-size: 0.72rem; letter-spacing: 0.5px;">
+							<i class="bi bi-bookmark-fill me-1"></i> Unidad 2: Motores Eléctricos
+						</div>
+			
+						<!-- TEMAS UNIDAD 2 -->
+						<a class="list-group-item list-group-item-action py-2 px-3 border-0" id="list-tema3-list" data-bs-toggle="list" href="#tema3" role="tab">
+							<div class="d-flex w-100 justify-content-between align-items-center mb-1">
+								<small class="fw-bold text-secondary" style="font-size: 0.7rem;">Tema 2.1</small>
+								<span class="badge bg-secondary-subtle text-secondary" style="font-size: 0.65rem;">5 Semanas</span>
+							</div>
+							<span class="d-block small">Motores Trifásicos y Arrancadores</span>
+						</a>
+			
+					</div>
+				</div>
+			</div>
 
       <!-- COLUMNA DERECHA: PANEL DE CONTENIDO DEL TEMA SELECCIONADO -->
       <div class="col-md-8 col-lg-9">
